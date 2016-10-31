@@ -115,6 +115,8 @@ while ( my @row = $sth->fetchrow_array ) {
     $pguid =~ s/-//g;
     my ($name,$date, $open, $high, $low, $close, $volume) = @$qrow;
     my $closeint = $close * $denom;
+    $date =~ s/\///g;
+    $date .= "000000"; 
     $sth2->execute($pguid, $comguid, $currencyguid, $date, $source, $stype, $closeint, $denom);
     undef $pguid ;
   }
