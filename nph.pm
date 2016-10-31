@@ -31,7 +31,7 @@ use DBI;
 use Data::GUID;
 use Finance::QuoteHist;
 
-$VERSION = '0.9';
+my $VERSION = '0.9';
 
 # Command line processing
 my $dflttext  = "Creates new price-db with monthly prices for all holdings in a copy of the source file.
