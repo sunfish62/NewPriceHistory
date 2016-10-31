@@ -75,7 +75,7 @@ my ($currencyguid, $denom) = $dbh->selectrow_array($sql);
 
 my ($DAY, $MONTH, $YEAR) = (localtime)[3,4,5];
 my $daynow = $YEAR + 1900 . $MONTH + 1 . $DAY;
-my $source = "Finance::QuoteHist";
+my $source = "Finance::Quote";
 my $stype = "last";
 
 # Retrieve commodities in file
