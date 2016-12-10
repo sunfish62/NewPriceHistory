@@ -30,6 +30,13 @@ date range, so that future iterations of the program would only modify the
 prices table after this date. This will allow ongoing maintenance of prices
 without requiring all past history to be cleared.
 
+DEPENDENCIES:
+This script depends on the following:
+File::Copy;
+DBI;
+Data::GUID;
+Finance::QuoteHist;
+
 CONDITIONS FOR USE:
 
 This script operates on SQLite GnuCash files; if your data file is XML (which is the default), then you must save it as a SQLite database before using. You can always Save As to go back to XML. 
